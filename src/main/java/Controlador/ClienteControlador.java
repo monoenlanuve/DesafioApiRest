@@ -2,6 +2,7 @@ package Controlador;
 
 import Mediador.Mediador;
 import modelo.Cliente;
+import modelo.ClienteDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,7 +38,7 @@ public ResponseEntity<Object>GetCliente(@PathVariable int id) {
     try {
         System.out.println(id);
         //Conecto con el controlador con el Servicio.
-        Cliente clienteEncontrado=clienteServicio.getCliene(id);
+        Cliente clienteEncontrado=clienteServicio.getId_cliente(id);
         return Mediador.generateResponse (
                 "Cliente enviado correctamente",
                 HttpStatus.OK,

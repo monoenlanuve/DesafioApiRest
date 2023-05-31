@@ -14,12 +14,13 @@ public class Cliente {
     private String nombre;
     @Column(nullable = false)
     private String apellido;
+    //aaa-mm-dd LocalDate
     @Column(nullable = false)
     private LocalDate fechaNacimiento;
 
     //Agrego Getters &Setters
 
-    public int getId_cliente() {
+    public int getId_cliente(int id) {
         return id_cliente;
     }
 
@@ -43,11 +44,11 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public String getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(String fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
     //Agrego Equal & Hashcode y ToString
@@ -83,4 +84,6 @@ public class Cliente {
                 ", fechaNacimiento='" + fechaNacimiento + '\'' +
                 '}';
     }
-}
+
+    public Cliente postCliente(Cliente cliente) {return null;};}
+
